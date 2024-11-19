@@ -1,0 +1,382 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #fdf6e3;
+    color: #333;
+    line-height: 1.6;
+}
+
+
+header {
+    background-color: #000000; 
+    color: #fff; 
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: transform 0.3s ease;
+}
+
+header.hidden {
+    transform: translateY(-100%);
+}
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 50px;
+    margin-right: 15px;
+    border-radius: 50%;
+   
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+    transition: background 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #ff0000;
+    border-radius: 5px;
+}
+
+
+#sobre {
+    padding: 60px 20px;
+    background-color: #ffffff;
+}
+
+.sobre-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 40px;
+}
+
+.sobre-texto {
+    flex: 1;
+    min-width: 300px;
+}
+
+.sobre-texto h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #000000;
+}
+
+.sobre-texto p {
+    font-size: 1.1em;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+.sobre-imagem img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+   
+}
+
+
+#produtos {
+    padding: 60px 20px;
+    background-color: #f3f3f2;
+    text-align: center;
+}
+
+#produtos h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: #000000;
+}
+
+.produtos-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.produto-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    width: 300px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.produto-card:hover {
+    transform: translateY(-10px);
+}
+
+.produto-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.produto-card h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #000000;
+}
+
+.produto-card p {
+    font-size: 1em;
+    margin-bottom: 15px;
+    color: #666;
+}
+
+.produto-card button {
+    background-color: #000000;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.produto-card button:hover {
+    background-color: #ff0000;
+}
+
+
+#contato {
+    padding: 60px 20px;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+#contato h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #000000;
+}
+
+#contato p {
+    font-size: 1.1em;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.whatsapp-button {
+    display: inline-flex;
+    align-items: center;
+    background-color: #25d366;
+    color: #fff;
+    text-decoration: none;
+    padding: 15px 25px;
+    border-radius: 50px;
+    font-size: 1.2em;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.whatsapp-button img {
+    width: 30px;
+    margin-right: 10px;
+}
+
+.whatsapp-button:hover {
+    background-color: #0b5a2b;
+}
+
+
+#feedback {
+    padding: 60px 20px;
+    background-color: #f3f3f2;
+    text-align: center;
+}
+
+#feedback h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: #000000;
+}
+
+.feedback-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.feedback-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    width: 300px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.feedback-card p {
+    font-style: italic;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.feedback-card h4 {
+    font-size: 1.1em;
+    color: #000000;
+}
+
+
+footer {
+    background-color: #000000;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9em;
+    line-height: 1.4;
+}
+
+
+@media (max-width: 768px) {
+    .sobre-container,
+    .produtos-container,
+    .feedback-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 15px;
+    }
+}
+
+#franquia {
+    background-color: #000000; 
+    padding: 50px 20px;
+    text-align: center;
+    
+}
+
+.convite-franquia h2 {
+    font-size: 2em;
+    color: #ffffff; 
+    margin-bottom: 20px;
+}
+
+.convite-franquia p {
+    font-size: 1.2em;
+    color: #ffffff; 
+    margin-bottom: 30px;
+}
+
+.botao-saiba-mais {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #ff0000; 
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease;
+}
+
+.botao-saiba-mais:hover {
+    background-color: #8B4513; 
+}
+
+
+
+
+/* Telas pequenas (smartphones, até 480px) */
+@media (max-width: 480px) {
+    header {
+        flex-direction: column;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .logo {
+        margin: 0 auto 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .sobre-container,
+    .produtos-container,
+    .feedback-container {
+        flex-direction: column;
+    }
+
+    .produto-card {
+        width: 90%; /* Ajusta a largura para caber na tela menor */
+    }
+
+    .whatsapp-button {
+        font-size: 1em;
+        padding: 10px 20px;
+    }
+
+    .botao-saiba-mais {
+        padding: 10px 20px;
+        font-size: 1em;
+    }
+}
+
+/* Telas médias (tablets, 481px a 768px) */
+@media (max-width: 768px) {
+    header {
+        padding: 15px;
+    }
+
+    .sobre-container,
+    .produtos-container,
+    .feedback-container {
+        flex-direction: column;
+    }
+
+    .produto-card {
+        width: 70%; /* Um pouco mais largo para tablets */
+    }
+
+    .feedback-card {
+        width: 70%;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+
